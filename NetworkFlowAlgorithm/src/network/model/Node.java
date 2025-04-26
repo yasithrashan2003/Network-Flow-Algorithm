@@ -1,35 +1,60 @@
 package network.model;
 
-public class Node{
+/**
+ * Public Node Class
+ * Represents node in the flow network
+ */
+public class Node {
     private int id;
     private boolean isSource;
     private boolean isTarget;
 
-
-
-    public Node(int id){
+    /**
+     * Create a constructor
+     * Create a new node with given ID
+     * @param id
+     */
+    public Node(int id) {
         this.id = id;
         this.isSource = false;
         this.isTarget = false;
     }
 
-    public int getId(){
+    /**
+     * Getters for getId
+     * @return getId
+     */
+    public int getId() {
         return id;
     }
 
-    public void setAsSource(){
+    /**
+     * Set Node as a source node
+     */
+    public void setAsSource() {
         isSource = true;
     }
 
-    public void setAsTarget(){
+    /**
+     * Set node as a target node
+     */
+    public void setAsTarget() {
         isTarget = true;
     }
 
-    public boolean isSource(){
+    /**
+     * Return true if this node is the source
+     * @return isSource
+     */
+    public boolean isSource() {
         return isSource;
     }
 
-    public boolean isTarget(){
+    /**
+     * Return true if the node is the target
+     * @return isTarget
+     */
+    public boolean isTarget() {
         return isTarget;
     }
 
