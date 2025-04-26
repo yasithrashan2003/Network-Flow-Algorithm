@@ -33,7 +33,7 @@ public class FlowNetwork {
         return node;
     }
 
-    public void setSourceAndTarget(Node source, Node target) {
+    public void setSourceAndTarget(int sourceId, int targetId) {
         this.source = nodeMap.get(source.getId());
         if(source != null){
             source.setAsSource();
@@ -93,7 +93,7 @@ public class FlowNetwork {
     public int calculateFlowValue(){
         int flowValue = 0;
         for(Edge edge : getOutgoingEdges(source.getId())){
-             flowValue += edge.getCapacity();
+             flowValue += edge.getFlow();
         }
         return flowValue;
     }
